@@ -5,7 +5,7 @@
 
 <main id="main">
     <!-- ======= Breadcrumbs ======= -->
-    <section class="breadcrumbs">
+    <section class="breadcrumbs fixed-top">
       <div class="container">
 
         <ol>
@@ -34,7 +34,7 @@
                 <i class="{{offre.icon}} icon"></i>
                 <h3>{{offre.title}}</h3>
                 <p>{{offre.text}}</p>
-                <a href="#" class="read-more"><span>Lire plus</span> <i class="bi bi-arrow-right"></i></a>
+                <a href="{% url 'detail_offre' offre.id %}" class="read-more"><span>En savoir plus</span> <i class="bi bi-arrow-right"></i></a>
               </div>
             </div>
             {% endfor %}
@@ -44,7 +44,6 @@
   
     </section><!-- End Services Section -->
 
-</br></br>
     <!-- ======= Alt Services Section ======= -->
     <section id="alt-services" class="alt-services">
 

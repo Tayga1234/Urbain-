@@ -5,7 +5,7 @@
 
 <main id="main">
     <!-- ======= Breadcrumbs ======= -->
-    <section class="breadcrumbs">
+    <section class="breadcrumbs fixed-top">
       <div class="container">
 
         <ol>
@@ -18,14 +18,14 @@
     </section><!-- End Breadcrumbs -->
 
     <section id="heroT" class="d-flex align-items-center">
+      
         <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
-          <div class="row justify-content-center">
-            <div class="col-xl-7 col-lg-9 text-center">
-              <h1>{{teams.text_team}}</h1>
-              <h2>{{teams.sous_text_team}}</h2>
-            </div>
-          </div>
           
+          <header class="section-header">
+            <h2>{{teams.text_team}}</h2>
+            <p>{{teams.sous_text_team}}</p>
+          </header>
+
           <div class="row icon-boxes">
             {% for poste in postes %}
             <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="{{poste.display}}">
@@ -66,17 +66,17 @@
                     <h4>{{m1.meth_1}}</h4>
                   </div>
                   <p>{{m1.text_meth_1}}</p>
-                <div class="d-flex align-items-center mb-2">
-                    <i class="bi bi-check2"></i>
-                    <h4>{{m1.meth_2}}</h4>
-                </div>
-                <p>{{m1.text_meth_2}}</p>
-                <div class="d-flex align-items-center mb-2">
-                    <i class="bi bi-check2"></i>
-                    <h4>{{m1.meth_3}}</h4>
-                </div>
-                <p>{{m1.text_meth_3}}</p>
-            </div><!-- Fin du contenu de l'onglet 1 -->
+                  <div class="d-flex align-items-center mb-2">
+                      <i class="bi bi-check2"></i>
+                      <h4>{{m1.meth_2}}</h4>
+                  </div>
+                  <p>{{m1.text_meth_2}}</p>
+                  <div class="d-flex align-items-center mb-2">
+                      <i class="bi bi-check2"></i>
+                      <h4>{{m1.meth_3}}</h4>
+                  </div>
+                  <ps>{{m1.text_meth_3}}</ps>
+              </div><!-- Fin du contenu de l'onglet 1 -->
           
               </div>
             </div>
@@ -90,8 +90,8 @@
           <div class="row feture-tabs" data-aos="fade-up">
 
             <div class="col-lg-6">
-                <img src="{{m2.image.url}}" class="img-fluid" alt="">
-              </div>
+              <img src="{{m2.image.url}}" class="img-fluid" alt="">
+            </div>
 
             <div class="col-lg-6">
               <h3>{{m2.title}}</h3>
@@ -106,22 +106,20 @@
                     <h4>{{m2.meth_1}}</h4>
                   </div>
                   <p>{{m2.text_meth_1}}</p>
-                <div class="d-flex align-items-center mb-2">
-                    <i class="bi bi-check2"></i>
-                    <h4>{{m2.meth_2}}</h4>
-                </div>
-                <p>{{m1.text_meth_2}}</p>
-                <div class="d-flex align-items-center mb-2">
-                    <i class="bi bi-check2"></i>
-                    <h4>{{m2.meth_3}}</h4>
-                </div>
-                <p>{{m2.text_meth_3}}</p>
-                </div><!-- Fin du contenu de l'onglet 1 -->
-          
+                  <div class="d-flex align-items-center mb-2">
+                      <i class="bi bi-check2"></i>
+                      <h4>{{m2.meth_2}}</h4>
+                  </div>
+                  <p>{{m1.text_meth_2}}</p>
+                  <div class="d-flex align-items-center mb-2">
+                      <i class="bi bi-check2"></i>
+                      <h4>{{m2.meth_3}}</h4>
+                  </div>
+                  <p>{{m2.text_meth_3}}</p>
+                </div><!-- Fin du contenu de l'onglet 1 -->          
               </div>
             </div>
-        
-        </div>
+          </div>
           <!-- End Feature Tabs -->
 
           <div class="row feture-tabs" data-aos="fade-up">

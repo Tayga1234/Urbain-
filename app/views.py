@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from .models import *
 
 # Create your views here.
@@ -66,6 +66,9 @@ def about(request):
     
     return render(request, 'about.html',context)
 
+#-------------------------------------------------
+#----------------SERVICES----------------------
+#-------------------------------------------------
 def service(request):
     headers = Header.objects.first()
     services = Service.objects.first()
@@ -92,6 +95,31 @@ def service(request):
         
     }
     return render(request, 'service.html',context)
+
+def detail_offre(request, offre_id):
+    offre = get_object_or_404(Offre, pk=offre_id)
+    
+    headers = Header.objects.first()
+    services = Service.objects.first()
+    offres = Offre.objects.all()
+    socials = Social.objects.all()
+    footers = Footer.objects.first()
+    liens = Lien.objects.all()
+    infos = Info.objects.first()
+    section = Section.objects.first()
+    context = {
+        'offre': offre,
+        
+        'headers': headers,
+        'services': services,
+        'offres':offres,
+        'socials':socials,
+        'footers':footers,
+        'liens':liens,
+        'infos':infos,
+        'section':section,
+    }
+    return render(request, 'services/detail.html', context)
 
 def team(request):
     headers = Header.objects.first()

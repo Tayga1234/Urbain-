@@ -200,7 +200,7 @@ class Service(models.Model):
 class Offre(models.Model):
     icon = models.CharField(max_length=200)
     title = models.CharField(max_length=200)
-    text = models.CharField(max_length=200)#text d'accroche
+    text = models.CharField(max_length=500)#text d'accroche
     color = models.CharField(max_length=100)
 
 class Poste(models.Model):
